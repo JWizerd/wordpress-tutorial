@@ -15,9 +15,9 @@
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
 </head>
 <body>
-  <header class="container">
+  <header class="container-fluid">
     <div class="row content-wrapper">
-      <div class="col-md-12">
+      <div class="col-sm-8 col-sm-offset-2">
         <h1 class="logo"><?php echo bloginfo('title'); ?></h1>
         <h2 class="phone"><?php echo $phone_number; ?></h2>
       </div>

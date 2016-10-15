@@ -2,7 +2,7 @@
 
 <footer class="container-fluid content-wrapper">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-sm-8 col-sm-offset-2">
       <h2>Footer</h2>
       <p>&copy; <?php echo date("Y"); ?></p>
     </div>
