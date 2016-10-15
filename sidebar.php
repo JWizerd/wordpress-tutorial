@@ -3,7 +3,7 @@
 
   <h2>Recent Posts</h2>
 
-  <?php define( 'WP_USE_THEMES', false );
+  <?php
         $post_params = array(
           'posts_per_page' => '10',
           'post_type' => 'post',
@@ -29,7 +29,7 @@
 
 <h2>Objects</h2>
 <!-- loop through custom post type OBJECTS -->
-<?php define( 'WP_USE_THEMES', false );
+<?php
       $post_params = array(
         'posts_per_page' => '10',
         'post_type' => 'objects',
@@ -55,7 +55,7 @@
 
 <h2>Activites</h2>
 <!-- loop through custom post type ACTIVITIES -->
-<?php define( 'WP_USE_THEMES', false );
+<?php
       $post_params = array(
         'posts_per_page' => '10',
         'post_type' => 'activites',
@@ -77,4 +77,5 @@
     </dl>
   <?php } ?>
 <?php } ?>
+
 </aside>
