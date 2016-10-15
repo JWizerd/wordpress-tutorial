@@ -18,7 +18,7 @@
   <header class="container-fluid">
     <div class="row content-wrapper">
       <div class="col-sm-8 col-sm-offset-2">
-        <h1 class="logo"><?php echo bloginfo('title'); ?></h1>
+        <h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo('title'); ?></a></h1>
         <h2 class="phone"><?php echo $phone_number; ?></h2>
       </div>
     </div>
