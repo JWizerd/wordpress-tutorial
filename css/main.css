@@ -1,0 +1,28 @@
+body, html {
+  height: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.content-wrapper {
+  padding: 80px 0 80px 0;
+}
+
+.logo {
+  float: left;
+}
+
+.phone {
+  float: right;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
