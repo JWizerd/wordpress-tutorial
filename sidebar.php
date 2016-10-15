@@ -1,31 +1,20 @@
 <div class="col-md-3">
-  <?php define( 'WP_USE_THEMES', false ); ?>
+  <h2>Posts</h2>
+  <!-- NOTES: It's important to note that apart from using the main wordpress loop it is a best practice to NOT reuse the same wordpress loop to output secondary queries to the posts database. This could have weird side effects. Therefore, each time new queries must be made you should create new instances of posts object and then parse the data. -->
 
-    <!-- Start the Loop. -->
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php define( 'WP_USE_THEMES', false );
+        $query = 'posts_per_page=10';
+        $queryObject = new WP_Query($query);
+  ?>
 
-   <!-- Display the Title as a link to the Post's permalink. -->
+  <!-- The Loop -->
+  <?php if ($queryObject->have_posts()) { ?>
+  	<?php while ($queryObject->have_posts()) {
 
-   <dl>
-     <dt>
-       <p><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
-     </dt>
-     <dd>
-       <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
-      <small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
-     </dd>
-   </dl>
+  		$queryObject->the_post(); ?>
 
-   <!-- Stop The Loop (but note the "else:" - see next line). -->
+  		<p><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></p>
 
-  <?php endwhile; else : ?>
-
-
-   <!-- The very first "if" tested to see if there were any Posts to -->
-   <!-- display.  This "else" part tells what do if there weren't any. -->
-   <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-
-
-   <!-- REALLY stop The Loop. -->
-  <?php endif; ?>
+  	<?php } ?>
+  <?php } ?>
 </div>
