@@ -35,3 +35,8 @@ footer {
   width: 100%;
   background-color: grey;
 }
+
+aside {
+  background-color: #fff;
+  padding: 10px 0 10px 10px;
+}
