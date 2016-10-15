@@ -6,7 +6,8 @@
   <?php define( 'WP_USE_THEMES', false );
         $post_params = array(
           'posts_per_page' => '10',
-          'post_type' => 'post'
+          'post_type' => 'post',
+          'orderby' => 'post_date'
         );
         $queryObject = new WP_Query($post_params);
   ?>
@@ -17,8 +18,63 @@
 
   		$queryObject->the_post(); ?>
 
-  		<p><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></p>
+      <dl>
+        <dt><a href="<?php echo get_permalink() ?>"><?php echo the_title(); ?></a></dt>
+        <dd><small><?php get_the_date(); ?></small></dd>
+        <dd><?php echo wp_trim_words( get_the_content(), 5, '...' ); ?></dd>
+      </dl>
 
   	<?php } ?>
   <?php } ?>
+
+<h2>Objects</h2>
+<!-- loop through custom post type OBJECTS -->
+<?php define( 'WP_USE_THEMES', false );
+      $post_params = array(
+        'posts_per_page' => '10',
+        'post_type' => 'objects',
+        'orderby' => 'post_date',
+      );
+      $queryObject = new WP_Query($post_params);
+?>
+
+<!-- The Loop -->
+<?php if ($queryObject->have_posts()) { ?>
+  <?php while ($queryObject->have_posts()) {
+
+    $queryObject->the_post(); ?>
+
+    <dl>
+      <dt><a href="<?php echo get_permalink() ?>"><?php echo the_title(); ?></a></dt>
+      <dd><small><?php echo get_the_date(); ?></small></dd>
+      <dd><?php echo wp_trim_words( get_the_content(), 5, '...' ); ?></dd>
+    </dl>
+
+  <?php } ?>
+<?php } ?>
+
+<h2>Activites</h2>
+<!-- loop through custom post type ACTIVITIES -->
+<?php define( 'WP_USE_THEMES', false );
+      $post_params = array(
+        'posts_per_page' => '10',
+        'post_type' => 'activites',
+        'orderby' => 'post_date'
+      );
+      $queryObject = new WP_Query($post_params);
+?>
+
+<!-- The Loop -->
+<?php if ($queryObject->have_posts()) { ?>
+  <?php while ($queryObject->have_posts()) {
+
+    $queryObject->the_post(); ?>
+
+    <dl>
+      <dt><a href="<?php echo get_permalink() ?>"><?php echo the_title(); ?></a></dt>
+      <dd><small><?php echo get_the_date(); ?></small></dd>
+      <dd><?php echo wp_trim_words( get_the_content(), 5, '...' ); ?></dd>
+    </dl>
+  <?php } ?>
+<?php } ?>
 </aside>
