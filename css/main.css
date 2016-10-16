@@ -1,9 +1,50 @@
-body {
-  box-sizing: border-box;
-}
+/*******************
+NAVIGATION: css menus can be great for breaking up your code into modules as well as helping you quickly navigate to a page/sections styles via cmd+f 
+
+--------------------------------
+1.0 DEFAULT & REUSABLE "OBJECTS"
+--------------------------------
+- 1.1 REUSABLES
+- 1.2 FORMS
+
+--------------------------------
+2.0 HEADER
+--------------------------------
+
+--------------------------------
+3.0 HOME
+--------------------------------
+
+--------------------------------
+4.0 SIDEBAR
+--------------------------------
+
+--------------------------------
+5.0 FOOTER
+--------------------------------
+
+--------------------------------
+6.0 POSTS
+--------------------------------
+- 6.1 COMMENTS
+
+--------------------------------
+7.0 FULLWIDTH TEMPLATE
+--------------------------------
+
+--------------------------------
+8.0 MEDIA QUERIES
+--------------------------------
+
+********************/
+
+/*--------------------------------
+1.0 DEFAULT
+--------------------------------*/
 
 body {
   background-color: #f1f1f1;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4 {
@@ -19,18 +60,75 @@ p:last-child {
   margin-bottom: 0;
 }
 
-.content-wrapper {
-  padding: 80px 0 80px 0;
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.logo {
-  float: left;
+img {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 100%;
+}
+
+/*--------------------------------
+1.1 REUSABLES
+--------------------------------*/
+
+.content-wrapper {
+  padding: 80px 0 80px 0;
 }
 
 .center-block {
   display: block;
   margin: 0 auto;
 }
+
+/*--------------------------------
+2.0 HEADER
+--------------------------------*/
+
+header {
+  background-color: #ddd;
+}
+
+.logo {
+  float: left;
+}
+
+.phone {
+  float: right;
+}
+
+
+/*--------------------------------
+4.0 SIDEBAR
+--------------------------------*/
+
+aside {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.sidebar-posts {
+  margin-bottom: 0;
+}
+
+/*--------------------------------
+5.0 FOOTER
+--------------------------------*/
+
+footer {
+  background-color: grey;
+}
+
+/*--------------------------------
+6.0 POSTS
+--------------------------------
+
+/*--------------------------------
+6.1 COMMENTS
+--------------------------------*/
 
 #comment {
   width: 100%;
@@ -40,29 +138,26 @@ p:last-child {
   font-size: 18px;
 }
 
-.phone {
-  float: right;
+/*--------------------------------
+7.0 FULLWIDTH TEMPLATE
+--------------------------------*/
+
+/*--------------------------------
+8.0 MEDIA QUERIES
+--------------------------------*/
+
+@media screen and (max-width: 991px) {
+  p:last-child {
+    margin-bottom: 20px;
+  }
 }
 
-header {
-  background-color: #ddd;
-}
-
-footer {
-  background-color: grey;
-}
-
-aside {
-  background-color: #fff;
-  padding: 10px 0 10px 10px;
-}
-
-.sidebar-posts {
-  margin-bottom: 0;
-}
-
-img {
-  display: block;
-  margin: 0 auto 30px auto;
-  width: 100%;
+@media screen and (max-width: 700px) {
+  .logo, .phone {
+    float: none;
+    text-align: center;
+  }
+  h1, h2, h3, h4 {
+    margin-bottom: 15px;
+  }
 }

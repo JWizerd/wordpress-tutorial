@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-8">
 
           <?php get_template_part( 'content', 'loop' ); ?>
 
