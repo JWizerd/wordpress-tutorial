@@ -14,7 +14,7 @@ function create_object_post_type() {
       'public'      => true,
       'has_archive' => true,
       'taxonomies'  => array('category', 'post_tag'),
-      'supports'    => array('custom-fields', 'editor', 'thumbnail')
+      'supports'    => array('title', 'custom-fields', 'editor', 'thumbnail', 'comments')
     )
   );
 }
@@ -31,7 +31,7 @@ function create_activity_post_type() {
       'public'      => true,
       'has_archive' => true,
       'taxonomies'  => array('category', 'post_tag'),
-      'supports'    => array('custom-fields', 'editor', 'thumbnail')
+      'supports'    => array('title', 'custom-fields', 'editor', 'thumbnail', 'comments')
     )
   );
 }

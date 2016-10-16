@@ -13,7 +13,8 @@
               <span><?php the_category(", "); ?></span>
 
               <?php the_content(); ?>
-
+              <!-- show comment and allow users to leave comments. simply invoke this the comments template tag -->
+              <?php comments_template(); ?>
             <?php endwhile; ?>
             <?php endif; ?>
         </div>
