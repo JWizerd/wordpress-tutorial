@@ -7,9 +7,8 @@
         <h2>Footer</h2>
         <p>&copy; <?php echo date("Y"); ?></p>
       </div>
-      <?php if (is_page_template('page-fullwidth.php')) { ?>
         <div class="col-sm-4 col-sm-offset-4">
-          <h2>Navigation</h2>
+          <h2>Page Navigation</h2>
           <ul>
 
             <?php
@@ -34,7 +33,6 @@
 
           </ul><!-- end footer pages navigation -->
         </div>
-      <?php } ?>
     </div>
     </div>
 </footer>
