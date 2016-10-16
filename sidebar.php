@@ -32,7 +32,7 @@
   <?php
         $post_params = array(
           'posts_per_page' => '10',
-          'orderby' => 'post_date'
+          'orderby'        => 'post_date'
         );
         $queryObject = new WP_Query($post_params);
   ?>
@@ -57,8 +57,8 @@
 <?php
       $post_params = array(
         'posts_per_page' => '10',
-        'post_type' => 'objects',
-        'orderby' => 'post_date',
+        'post_type'      => 'objects',
+        'orderby'        => 'post_date',
       );
       $queryObject = new WP_Query($post_params);
 ?>
@@ -83,8 +83,8 @@
 <?php
       $post_params = array(
         'posts_per_page' => '10',
-        'post_type' => 'activites',
-        'orderby' => 'post_date'
+        'post_type'      => 'activites',
+        'orderby'        => 'post_date'
       );
       $queryObject = new WP_Query($post_params);
 ?>
