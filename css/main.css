@@ -1,5 +1,5 @@
 /*******************
-NAVIGATION: css menus can be great for breaking up your code into modules as well as helping you quickly navigate to a page/sections styles via cmd+f 
+NAVIGATION: css menus can be great for breaking up your code into modules as well as helping you quickly navigate to a page/sections styles via cmd+f
 
 --------------------------------
 1.0 DEFAULT & REUSABLE "OBJECTS"
@@ -60,6 +60,7 @@ p:last-child {
   margin-bottom: 0;
 }
 
+/* fixes horizontal overflow that sometimes happens with boostrap nested rows */
 .row {
   margin-left: 0;
   margin-right: 0;

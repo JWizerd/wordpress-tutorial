@@ -17,7 +17,7 @@ Template Name: Fullwidth
 
           <!-- display the post content for a single post THE MAIN WORDPRESS LOOP -->
           <?php get_template_part( 'content', 'loop' ); ?>
-          
+
         </div>
       </div>
     </div>
