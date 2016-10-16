@@ -4,9 +4,6 @@
   <h2>Recent Posts</h2>
 
   <!-- The Loop -->
-  <?php
-  $post_types = array('post', 'page');
-  get_template_part( 'content', 'sidebarloop' );
-  ?>
+  <?php get_template_part( 'sidebarloop' ); ?>
 
 </aside>
