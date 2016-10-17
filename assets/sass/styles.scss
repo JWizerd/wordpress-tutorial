@@ -50,6 +50,13 @@ $image-path: '../img/';
 
 // learn more about sass here http://sass-lang.com/guide
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 
 /*--------------------------------
 1.3 REUSABLES
@@ -111,7 +118,7 @@ img {
 	display: none;
 }
 
-input#s {
+input#s, .search-categories {
 	display: inline-block;
 	width: 75%;
 }
@@ -120,6 +127,12 @@ input#s:focus {
 	background-color: grey;
 	color: #fff;
 	outline: 0;
+}
+
+.btn-submit {
+	@include border-radius(2px);
+	background-color: #ddd;
+	border: none;
 }
 
 
