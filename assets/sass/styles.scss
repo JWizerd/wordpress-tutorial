@@ -12,7 +12,7 @@ NAVIGATION: css menus can be great for breaking up your code into modules as wel
 - 1.2 MIXINS
 - 1.3 REUSABLES
 - 1.4 DEFAULT
-- 1.2 FORMS
+- 1.5 FORMS
 
 2.0 HEADER
 
@@ -97,6 +97,31 @@ img {
   margin: 0 auto 30px auto;
   width: 100%;
 }
+
+/*--------------------------------
+1.5 FORMS
+--------------------------------*/
+
+.searchform {
+	display: block;
+	margin-bottom: 23px;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+input#s {
+	display: inline-block;
+	width: 75%;
+}
+
+input#s:focus {
+	background-color: grey;
+	color: #fff;
+	outline: 0;
+}
+
 
 /*--------------------------------
 2.0 HEADER

@@ -17,7 +17,7 @@
     $queryObject->the_post(); ?>
 
     <dl>
-      <dt><a href="<?php echo get_permalink() ?>"><?php echo the_title(); ?></a></dt>
+      <dt><a href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a></dt>
       <dd><small><?php get_the_date(); ?></small></dd>
       <dd><?php echo wp_trim_words( get_the_content(), 5, '...' ); ?></dd>
     </dl>
