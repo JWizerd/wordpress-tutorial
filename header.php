@@ -15,7 +15,7 @@
     <div class="row content-wrapper">
       <div class="col-sm-10 col-sm-offset-1">
 
-        <h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo('title'); ?></a></h1>
+        <h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><i class="fa fa-optin-monster" aria-hidden="true"></i><?php echo bloginfo('title'); ?></a></h1>
 
         <h2 class="phone"><?php echo $phone_number; ?></h2>
 

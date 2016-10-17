@@ -1,8 +1,6 @@
 <!-- display the post content for a single post THE MAIN WORDPRESS LOOP -->
 <?php
 
-  $tmp = get_page_template_slug('12');
-
   if (have_posts()) : while (have_posts()) : the_post();
 
   if ( get_post_type() == 'post' || get_post_type() == 'objects' || get_post_type() == 'activites' ) {
