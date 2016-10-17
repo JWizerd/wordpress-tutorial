@@ -1,25 +1,26 @@
 <!-- display the post content for a single post THE MAIN WORDPRESS LOOP -->
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php
 
-  <?php if ( get_post_type() == 'post' || get_post_type() == 'objects' || get_post_type() == 'activites' ) { ?>
+  $tmp = get_page_template_slug('12');
 
-    <h2><?php the_title(); ?></h2>
+  if (have_posts()) : while (have_posts()) : the_post();
 
-    <span><?php echo get_the_date(); ?></span>
-    <!-- output cateogories and post tags -->
-    <span><?php the_category(", "); ?></span>
+  if ( get_post_type() == 'post' || get_post_type() == 'objects' || get_post_type() == 'activites' ) {
 
-    <?php the_content(); ?>
-    <!-- show comment and allow users to leave comments. simply invoke this the comments template tag -->
-    <?php comments_template(); ?>
+   get_template_part('post/layout');
 
-  <?php } else { ?>
+ } elseif (is_page_template('page-fullwidth.php')) {
 
-    <h2><?php the_title(); ?></h2>
-    <?php the_content(); ?>
+    get_template_part('fullwidth/layout');
 
-  <?php } ?>
+  } else {
 
-<?php endwhile; ?>
-<?php else: _e( 'Sorry, no posts matched your criteria.', 'textdomain' ); ?>
-<?php endif; ?>
+    get_template_part('page/layout');
+
+  }
+
+endwhile;
+else: _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+endif;
+
+?>

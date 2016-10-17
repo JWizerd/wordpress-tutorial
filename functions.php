@@ -1,10 +1,9 @@
 <?php
 
 function theme_styles() {
-
+	wp_enqueue_style( 'wpb-fa', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/styles.css' );
 	wp_enqueue_style('print_css', get_template_directory_uri() . '/assets/css/print.css' );
-
 }
 
 add_action('wp_enqueue_scripts', 'theme_styles' );

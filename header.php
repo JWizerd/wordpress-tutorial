@@ -18,7 +18,7 @@
         <h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo('title'); ?></a></h1>
 
         <h2 class="phone"><?php echo $phone_number; ?></h2>
-        
+
       </div>
     </div>
   </header>
