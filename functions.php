@@ -1,5 +1,8 @@
 <?php
 
+// ADD CUSTOM POST TYPE SUPPORT FOR FEATURED IMAGES
+add_theme_support( 'post-thumbnails' );
+
 function theme_styles() {
 	wp_enqueue_style( 'wpb-fa', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/styles.css' );
@@ -25,9 +28,6 @@ function theme_js() {
 }
 
 add_action('wp_enqueue_scripts', 'theme_js' );
-
-// ADD CUSTOM POST TYPE SUPPORT FOR FEATURED IMAGES
-add_theme_support( 'post-thumbnails' );
 
 add_action('init', 'create_object_post_type');
 function create_object_post_type() {
