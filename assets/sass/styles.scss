@@ -27,7 +27,9 @@ NAVIGATION: css menus can be great for breaking up your code into modules as wel
 
 7.0 FULLWIDTH TEMPLATE
 
-8.0 MEDIA QUERIES
+8.0 SEARCH RESULT
+
+9.0 MEDIA QUERIES
 
 ********************/
 
@@ -202,7 +204,19 @@ footer {
 --------------------------------*/
 
 /*--------------------------------
-8.0 MEDIA QUERIES
+8.0 SEARCH
+--------------------------------*/
+
+.search-result {
+	margin-bottom: 20px;
+}
+
+.search-result p {
+	margin-bottom: 0;
+}
+
+/*--------------------------------
+9.0 MEDIA QUERIES
 --------------------------------*/
 
 @media screen and (max-width: 991px) {

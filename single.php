@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-8">
 
-          <?php get_template_part( 'loop' ); ?>\
+          <?php get_template_part( 'loop' ); ?>
 
           <?php comments_template(); ?>
 

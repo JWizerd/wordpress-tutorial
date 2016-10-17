@@ -1,8 +1,10 @@
 <!-- display the post content for a single post THE MAIN WORDPRESS LOOP -->
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <?php if (is_page_template('single.php')) { ?>
+  <?php if ( get_post_type() == 'post' || get_post_type() == 'objects' || get_post_type() == 'activites' ) { ?>
+
     <h2><?php the_title(); ?></h2>
+
     <span><?php echo get_the_date(); ?></span>
     <!-- output cateogories and post tags -->
     <span><?php the_category(", "); ?></span>
