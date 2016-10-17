@@ -1,0 +1,193 @@
+// customize bootstrap variables here:
+@import "variables";
+@import "bootstrap";
+@import "compass";
+
+/*******************
+NAVIGATION: css menus can be great for breaking up your code into modules as well as helping you quickly navigate to a page/sections styles via cmd+f
+
+--------------------------------
+1.0 DEFAULT VARIABLES REUSABLE "OBJECTS"
+--------------------------------
+- 1.1 VARIABLES
+- 1.2 MIXINS
+- 1.3 REUSABLES
+- 1.4 DEFAULT
+- 1.2 FORMS
+
+--------------------------------
+2.0 HEADER
+--------------------------------
+
+--------------------------------
+3.0 HOME
+--------------------------------
+
+--------------------------------
+4.0 SIDEBAR
+--------------------------------
+
+--------------------------------
+5.0 FOOTER
+--------------------------------
+
+--------------------------------
+6.0 POSTS
+--------------------------------
+- 6.1 COMMENTS
+
+--------------------------------
+7.0 FULLWIDTH TEMPLATE
+--------------------------------
+
+--------------------------------
+8.0 MEDIA QUERIES
+--------------------------------
+
+********************/
+
+/*--------------------------------
+1.1 VARIABLES
+--------------------------------*/
+$cream:  #f1f1f1;
+
+$cloudy: #ddd;
+
+$image-path: '../img/';
+/*--------------------------------
+1.2 MIXINS
+--------------------------------*/
+
+
+/*--------------------------------
+1.3 REUSABLES
+--------------------------------*/
+
+.content-wrapper {
+  padding: 80px 0 80px 0;
+}
+
+.center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+/*--------------------------------
+1.4 DEFAULT
+--------------------------------*/
+
+body {
+  background-color: $cream;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* fixes horizontal overflow that sometimes happens with boostrap nested rows */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+img {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 100%;
+}
+
+/*--------------------------------
+2.0 HEADER
+--------------------------------*/
+
+header {
+  background-color: $cloudy;
+  background: url('#{$image-path}bg_leaf.jpg') center center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  opacity: 0;
+  height: 0;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.logo, .logo a {
+  float: left;
+  color: #fff;
+}
+
+.phone {
+  float: right;
+}
+
+
+/*--------------------------------
+4.0 SIDEBAR
+--------------------------------*/
+
+aside {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.sidebar-posts {
+  margin-bottom: 0;
+}
+
+/*--------------------------------
+5.0 FOOTER
+--------------------------------*/
+
+footer {
+  background-color: grey;
+}
+
+/*--------------------------------
+6.0 POSTS
+--------------------------------
+
+/*--------------------------------
+6.1 COMMENTS
+--------------------------------*/
+
+#comment {
+  width: 100%;
+}
+
+.comment-body {
+  font-size: 18px;
+}
+
+/*--------------------------------
+7.0 FULLWIDTH TEMPLATE
+--------------------------------*/
+
+/*--------------------------------
+8.0 MEDIA QUERIES
+--------------------------------*/
+
+@media screen and (max-width: 991px) {
+  p:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .logo, .logo a, .phone {
+    float: none;
+    text-align: center;
+  }
+  h1, h2, h3, h4 {
+    margin-bottom: 15px;
+  }
+}
