@@ -1,9 +1,3 @@
-<?php
-  // variables
-  $phone_number = "(970) 391-2132";
-?>
-<?php wp_head(); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +7,8 @@
   <title><?php echo bloginfo('title'); ?></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+  <?php $phone_number = "(970) 391-2132"; ?>
+  <?php wp_head(); ?>
 </head>
 <body>
   <header class="container-fluid">

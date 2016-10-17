@@ -5,7 +5,7 @@
                             'post',
                             'objects',
                             'activites'
-                      ),
+                       ),
         'orderby' => 'post_date'
       );
       $queryObject = new WP_Query($post_params);

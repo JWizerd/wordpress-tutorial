@@ -17,6 +17,7 @@
     <?php the_content(); ?>
 
   <?php } ?>
-  
+
 <?php endwhile; ?>
+<?php else: _e( 'Sorry, no posts matched your criteria.', 'textdomain' ); ?>
 <?php endif; ?>
