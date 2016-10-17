@@ -57,6 +57,9 @@ $image-path: '../img/';
 /*--------------------------------
 1.2 MIXINS
 --------------------------------*/
+// @mixin selector($attribute) and then @include selector(attribute ex. 10px)are great for vendor prefixes
+// @extend .class reuse classes with this sass feature
+// learn more about sass here http://sass-lang.com/guide
 
 
 /*--------------------------------
@@ -118,7 +121,7 @@ header {
   opacity: 0;
   height: 0;
   color: #fff;
-  text-shadow: 1px 1px 1px #999;
+  text-shadow: 1px 1px 1px #333;
 }
 
 .logo, .logo a {
