@@ -9,6 +9,7 @@
           <?php get_template_part('category/loop'); ?>
         </ul>
       </div>
+      <?php get_sidebar(); ?>
     </div>
   </div>
 </main>

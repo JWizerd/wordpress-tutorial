@@ -8,4 +8,8 @@
   <!-- The Loop -->
   <?php get_template_part( 'sidebar_loop' ); ?>
 
+  <!-- show all tags on website -->
+  <h2>Tags</h2>
+  <?php wp_tag_cloud(); ?>
+
 </aside>
