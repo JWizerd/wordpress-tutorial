@@ -5,7 +5,7 @@
         <div class="col-md-8">
         <h1>Tag Results for: <?php echo single_tag_title() ?></h1>
         <ul class="search-results">
-          <?php get_template_part('category/loop'); ?>
+          <?php get_template_part('tag/loop'); ?>
         </ul>
       </div>
     </div>
