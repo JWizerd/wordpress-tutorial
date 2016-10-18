@@ -214,9 +214,7 @@ header {
 
 .primary-nav {}
 
-.primary-nav ul {
-  text-align: center;
-}
+.primary-nav ul {}
 
 .primary-nav li {
   display: inline-block;
@@ -287,8 +285,11 @@ aside {
   padding: 15px;
 }
 
-.sidebar-posts {
-  margin-bottom: 0;
+#sidebar-nav {}
+
+#sidebar-nav li {
+  list-style: none;
+  padding-bottom: 10px;
 }
 
 /*--------------------------------
