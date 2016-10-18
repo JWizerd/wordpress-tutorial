@@ -1,8 +1,25 @@
 <?php
 
-// ADD CUSTOM POST TYPE SUPPORT FOR FEATURED IMAGES
+// THEME SUPPORT
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'custom-header' );
+add_theme_support( 'custom-background' );
+add_theme_support( 'title-tag' );
+add_theme_support( 'html5');
+add_theme_support( 'menus' );
+// different ways of showing post content
+// add_theme_support( 'post-formats', array('video', 'aside', 'gallery', 'image'));
 
+//register navigations
+add_action( 'after_setup_theme', 'wpt_setup' );
+    if ( ! function_exists( 'wpt_setup' ) ):
+        function wpt_setup() {
+            register_nav_menu( 'primary', __( 'Primary Navigation', 'wordpress-tutorial' ) );
+						register_nav_menu( 'posts', __( 'Posts', 'wordpress-tutorial' ) );
+						register_nav_menu( 'categories', __( 'Categories', 'wordpress-tutorial' ) );
+        } endif;
+
+// styles and scripts
 function theme_styles() {
 	wp_enqueue_style( 'wpb-fa', get_template_directory_uri() . '/assets/css/font-awesome.min.css' );
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/assets/css/styles.css' );
@@ -29,6 +46,8 @@ function theme_js() {
 
 add_action('wp_enqueue_scripts', 'theme_js' );
 
+
+// custom post type
 add_action('init', 'create_object_post_type');
 function create_object_post_type() {
   register_post_type(
@@ -46,6 +65,7 @@ function create_object_post_type() {
   );
 }
 
+// custom post type
 add_action('init', 'create_activity_post_type');
 function create_activity_post_type() {
   register_post_type(
@@ -61,4 +81,39 @@ function create_activity_post_type() {
       'supports'    => array('title', 'custom-fields', 'editor', 'thumbnail', 'comments')
     )
   );
+}
+
+// register widgets
+if (function_exists('register_sidebar')) {
+
+	register_sidebar(array(
+		'name' => 'Sidebar Nav',
+		'id'   => 'sidebar-nav',
+		'description'   => 'This is an area for a navigation',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+	));
+
+	register_sidebar(array(
+		'name' => 'Footer Space 1',
+		'id'   => 'footer-nav',
+		'description'   => 'This for footer area number 1',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+	));
+
+	register_sidebar(array(
+		'name' => 'Footer Nav',
+		'id'   => 'footer-nav',
+		'description'   => 'This for footer area number 1',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+	));
+
 }

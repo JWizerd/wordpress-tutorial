@@ -3,13 +3,7 @@
 
   <?php get_search_form(); ?>
 
-  <h2>Recent Posts</h2>
-
   <!-- The Loop -->
-  <?php get_template_part( 'sidebar_loop' ); ?>
-
-  <!-- show all tags on website -->
-  <h2>Tags</h2>
-  <?php wp_tag_cloud(); ?>
+  <?php get_template_part( 'sidebar_widgets' ); ?>
 
 </aside>
